@@ -1,7 +1,11 @@
 #include <iostream>
 #include <vector>
 
-void merge(std::vector<int>& arr, int left, int mid, int right) {
+using  namespace std;
+/* class SortingAlgorithms{
+    
+} */
+void merge(vector<int>& arr, int left, int mid, int right) {
     int n1 = mid - left + 1;
     int n2 = right - mid;
 
