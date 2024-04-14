@@ -9,6 +9,10 @@ struct node{
 
 class SinglyLinkedList{
     private:
-        node* head; //head of the list
-
+        node* head; //head of the list pointed to a reference in memory from the constructor 'node'
+    public: 
+        SinglyLinkedList(){
+            head = nullptr;
+        }
+        
 }

@@ -2,6 +2,7 @@
 #include <string>
 #include <vector>
 #include <cmath>
+#include <cstdio>
 
 using namespace std;
 
@@ -65,13 +66,11 @@ int main() {
     int resLin = searchAlgos.linearSearch(arr, size, target2);
 
     if (resLin == -1) {
-        cout << "Element is not present in the array" << endl;
+        //cout << "Element is not present in the array" << endl;
+        printf("Element is not present in the array \n");
     } else {
-        cout << "Element is present at index " << resLin << endl;
+        //cout << "Element is present at index " << resLin << endl;
+        printf("Element is present at index %d\n", resLin);
     }
-
-
-
-
     return 0;
 }
