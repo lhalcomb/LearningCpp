@@ -14,5 +14,7 @@ class SinglyLinkedList{
         SinglyLinkedList(){
             head = nullptr;
         }
+
+        
         
 }
