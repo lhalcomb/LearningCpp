@@ -10,8 +10,8 @@ void merge(vector<int>& arr, int left, int mid, int right) {
     int n2 = right - mid;
 
     // Create temporary arrays
-    std::vector<int> leftArray(n1);
-    std::vector<int> rightArray(n2);
+    vector<int> leftArray(n1);
+    vector<int> rightArray(n2);
 
     // Copy data to temporary arrays leftArray[] and rightArray[]
     for (int i = 0; i < n1; i++)
@@ -50,7 +50,7 @@ void merge(vector<int>& arr, int left, int mid, int right) {
     }
 }
 
-void mergeSort(std::vector<int>& arr, int left, int right) {
+void mergeSort(vector<int>& arr, int left, int right) {
     if (left < right) {
         // Same as (left + right) / 2, but avoids overflow for large left and right
         int mid = left + (right - left) / 2;
@@ -65,18 +65,18 @@ void mergeSort(std::vector<int>& arr, int left, int right) {
 }
 
 int main() {
-    std::vector<int> arr = {12, 11, 13, 5, 6, 7};
+    vector<int> arr = {12, 11, 13, 5, 6, 7};
 
-    std::cout << "Original array: ";
+    cout << "Original array: ";
     for (int num : arr) {
-        std::cout << num << " ";
+        cout << num << " ";
     }
 
     mergeSort(arr, 0, arr.size() - 1);
 
-    std::cout << "\nSorted array: ";
+    cout << "\nSorted array: ";
     for (int num : arr) {
-        std::cout << num << " ";
+        cout << num << " ";
     }
 
     return 0;
