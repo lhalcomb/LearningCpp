@@ -21,3 +21,13 @@ Anyways, if you do get it running, enjoy Space Invaders!!
 
 Link to the video used:
 https://www.youtube.com/watch?v=TGo3Oxdpr5o&t=211s&ab_channel=ProgrammingWithNick
+
+
+Information on how to run this project: 
+
+I used the raylib library for the game itself. I use the clang compiler to compile the C/C++ code. Therefore, the following is instructions on how I did it. In the future, I plan to make this compatible for linux and macOS. So you will see different sections throughout this file dedicated to the different operating systems. However, getting it to run on windows may be a little bit different with the MinGW compiler. I plan to have this project working on that too but for now. Linux and MacOS is my plan. 
+
+How to run on MacOS:
+
+
+How to run on Linux: (Debian based btw)
