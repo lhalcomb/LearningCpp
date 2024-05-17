@@ -2,8 +2,8 @@
 #include <raylib.h>
 
 //Project oriented header files 
-#include "spaceship.hpp"
-#include "game.hpp"
+#include "../Components/spaceship.hpp"
+#include "../Components/game.hpp"
 
 //This is imported for debugging purposes and might be deprecated later
 #include <iostream>
