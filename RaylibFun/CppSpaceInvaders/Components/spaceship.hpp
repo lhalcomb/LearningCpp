@@ -1,5 +1,10 @@
 #pragma once 
 #include <raylib.h>
+#include <vector>
+
+#include "laser.hpp"
+
+using namespace std;
 
 class Spaceship{
     public:
@@ -12,9 +17,11 @@ class Spaceship{
         void MoveRight();
 
         void FireLaser();
+        vector<Laser> lasers;
 
-    public: //go back and change this to private later
+    private: //go back and change this to private later... Done. 
         Texture2D image; 
         Vector2 position;
+        double lastFireTime;
 
 };

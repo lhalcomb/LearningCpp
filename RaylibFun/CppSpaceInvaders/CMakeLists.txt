@@ -17,6 +17,7 @@ add_executable(CppSpaceInvaders
     src/main.cpp
     components/game.cpp
     components/spaceship.cpp
+    components/laser.cpp
 )
 
 # Link libraries

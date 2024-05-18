@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/components/game.cpp" "CMakeFiles/CppSpaceInvaders.dir/components/game.cpp.o" "gcc" "CMakeFiles/CppSpaceInvaders.dir/components/game.cpp.o.d"
+  "/Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/components/laser.cpp" "CMakeFiles/CppSpaceInvaders.dir/components/laser.cpp.o" "gcc" "CMakeFiles/CppSpaceInvaders.dir/components/laser.cpp.o.d"
   "/Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/components/spaceship.cpp" "CMakeFiles/CppSpaceInvaders.dir/components/spaceship.cpp.o" "gcc" "CMakeFiles/CppSpaceInvaders.dir/components/spaceship.cpp.o.d"
   "/Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/src/main.cpp" "CMakeFiles/CppSpaceInvaders.dir/src/main.cpp.o" "gcc" "CMakeFiles/CppSpaceInvaders.dir/src/main.cpp.o.d"
   )

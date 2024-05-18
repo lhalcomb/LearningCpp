@@ -24,5 +24,7 @@ class Game {
         void HandlePlayerInput();
 
     public: //go back and change this to private later
+        void DeleteInactiveLasers();
         Spaceship spaceship;
+
 };

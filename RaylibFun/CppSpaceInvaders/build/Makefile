@@ -153,6 +153,30 @@ components/game.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppSpaceInvaders.dir/build.make CMakeFiles/CppSpaceInvaders.dir/components/game.cpp.s
 .PHONY : components/game.cpp.s
 
+components/laser.o: components/laser.cpp.o
+.PHONY : components/laser.o
+
+# target to build an object file
+components/laser.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppSpaceInvaders.dir/build.make CMakeFiles/CppSpaceInvaders.dir/components/laser.cpp.o
+.PHONY : components/laser.cpp.o
+
+components/laser.i: components/laser.cpp.i
+.PHONY : components/laser.i
+
+# target to preprocess a source file
+components/laser.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppSpaceInvaders.dir/build.make CMakeFiles/CppSpaceInvaders.dir/components/laser.cpp.i
+.PHONY : components/laser.cpp.i
+
+components/laser.s: components/laser.cpp.s
+.PHONY : components/laser.s
+
+# target to generate assembly for a file
+components/laser.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppSpaceInvaders.dir/build.make CMakeFiles/CppSpaceInvaders.dir/components/laser.cpp.s
+.PHONY : components/laser.cpp.s
+
 components/spaceship.o: components/spaceship.cpp.o
 .PHONY : components/spaceship.o
 
@@ -213,6 +237,9 @@ help:
 	@echo "... components/game.o"
 	@echo "... components/game.i"
 	@echo "... components/game.s"
+	@echo "... components/laser.o"
+	@echo "... components/laser.i"
+	@echo "... components/laser.s"
 	@echo "... components/spaceship.o"
 	@echo "... components/spaceship.i"
 	@echo "... components/spaceship.s"

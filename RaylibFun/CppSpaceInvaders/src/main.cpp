@@ -5,6 +5,7 @@
 #include "../Components/spaceship.hpp"
 #include "../Components/game.hpp"
 
+
 //This is imported for debugging purposes and might be deprecated later
 #include <iostream>
 
@@ -28,20 +29,23 @@ int main()
     SetTargetFPS(60);
 
     Game game;
+    
 
     //Debugging Section
-    cout<< "Debugging: "<<endl;
+    /*cout<< "Debugging: "<<endl;
     cout<< "Spaceship x position: " << game.spaceship.position.x <<endl;
-    cout<< "Spaceship y position: " <<game.spaceship.position.y <<endl;
+    cout<< "Spaceship y position: " <<game.spaceship.position.y <<endl;*/
     
     
 
     while(!WindowShouldClose()) 
     {
         game.HandlePlayerInput();
+        game.Update();
         BeginDrawing();
         ClearBackground(gray);
         game.Draw();
+        
 
         EndDrawing();
 
