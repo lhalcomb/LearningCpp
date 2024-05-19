@@ -20,6 +20,10 @@ Game::Game()
     aliens = createAliens();
     aliensDirection = 1;
     timeLastAlienFired = 0;
+    timeLastSpawned = 0.0;
+    mysterShipSpawnInterval = GetRandomValue(10, 20);
+    
+    
 
 }
 
@@ -31,6 +35,13 @@ Game::~Game()
 
 void Game::Update()
 {
+    double currentTime = GetTime();
+    if(currentTime - timeLastSpawned > mysterShipSpawnInterval){
+        mysteryship.Spawn();
+        timeLastSpawned = GetTime();
+        mysterShipSpawnInterval = GetRandomValue(10, 20);
+    }
+
     for (auto& laser: spaceship.lasers)
     {
         laser.Update();
@@ -44,7 +55,7 @@ void Game::Update()
 
     DeleteInactiveLasers();
     //cout << "Vector Size: " << spaceship.lasers.size() << endl;
-    
+    mysteryship.Update();
 }
 
 void Game::Draw()
@@ -69,6 +80,8 @@ void Game::Draw()
     for (auto& laser: alienLasers){
         laser.Draw();
     }
+
+    mysteryship.Draw();
 }
 
 void Game::HandlePlayerInput()
@@ -104,7 +117,7 @@ void Game::DeleteInactiveLasers()
             ++ it;
         }
     }
-    
+
     for (auto it = alienLasers.begin(); it != alienLasers.end();){
         if (!it -> active)
         {
@@ -141,7 +154,8 @@ std::vector<Alien> Game::createAliens()
      {
         for (int columnOfAliens = 0; columnOfAliens < 11; columnOfAliens++){
             //In styling terms, this can be considered as padding-around for the aliens
-            int cellSize = 55;
+            int cellSize = 55; //Also each image is 55 pixels wide
+            
             //New Grid location for aliens
             int alienOffsetX = 75; 
             int alienOffsetY = 110;

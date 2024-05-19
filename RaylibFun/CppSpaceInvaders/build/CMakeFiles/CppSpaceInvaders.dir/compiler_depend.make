@@ -870,6 +870,7 @@ CMakeFiles/CppSpaceInvaders.dir/components/game.cpp.o: /Users/laydenhalcomb/Lear
   /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/headerFiles/alien.hpp \
   /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/headerFiles/block.hpp \
   /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/headerFiles/laser.hpp \
+  /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/headerFiles/mysteryship.hpp \
   /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/headerFiles/obstacle.hpp \
   /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/headerFiles/spaceship.hpp \
   /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/headerFiles/game.hpp \
@@ -1701,6 +1702,11 @@ CMakeFiles/CppSpaceInvaders.dir/components/laser.cpp.o: /Users/laydenhalcomb/Lea
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include/stdint.h \
   /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/headerFiles/colors.hpp \
   /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/headerFiles/laser.hpp \
+  /opt/homebrew/Cellar/raylib/5.0/include/raylib.h
+
+CMakeFiles/CppSpaceInvaders.dir/components/mysteryship.cpp.o: /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/components/mysteryship.cpp \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include/stdarg.h \
+  /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/headerFiles/mysteryship.hpp \
   /opt/homebrew/Cellar/raylib/5.0/include/raylib.h
 
 CMakeFiles/CppSpaceInvaders.dir/components/obstacle.cpp.o: /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/components/obstacle.cpp \
@@ -4256,6 +4262,7 @@ CMakeFiles/CppSpaceInvaders.dir/src/main.cpp.o: /Users/laydenhalcomb/LearningCpp
   /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/headerFiles/alien.hpp \
   /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/headerFiles/block.hpp \
   /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/headerFiles/laser.hpp \
+  /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/headerFiles/mysteryship.hpp \
   /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/headerFiles/obstacle.hpp \
   /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/headerFiles/spaceship.hpp \
   /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/headerFiles/colors.hpp \
@@ -4277,6 +4284,8 @@ CMakeFiles/CppSpaceInvaders.dir/src/main.cpp.o: /Users/laydenhalcomb/LearningCpp
 /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/headerFiles/spaceship.hpp:
 
 /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/headerFiles/obstacle.hpp:
+
+/Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/headerFiles/mysteryship.hpp:
 
 /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/headerFiles/laser.hpp:
 
@@ -4737,6 +4746,8 @@ CMakeFiles/CppSpaceInvaders.dir/src/main.cpp.o: /Users/laydenhalcomb/LearningCpp
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__type_traits/enable_if.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__type_traits/datasizeof.h:
+
+/Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/components/mysteryship.cpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__type_traits/copy_cv.h:
 

@@ -22,6 +22,7 @@ add_executable(CppSpaceInvaders
     components/block.cpp
     components/obstacle.cpp
     components/alien.cpp
+    components/mysteryship.cpp
 )
 
 # Link libraries

@@ -852,6 +852,7 @@ CMakeFiles/CppSpaceInvaders.dir/components/game.cpp.o: \
   /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/components/../headerFiles/../headerFiles/obstacle.hpp \
   /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/components/../headerFiles/../headerFiles/block.hpp \
   /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/components/../headerFiles/../headerFiles/alien.hpp \
+  /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/components/../headerFiles/../headerFiles/mysteryship.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/iostream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/istream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/ostream \

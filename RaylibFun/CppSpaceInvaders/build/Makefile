@@ -249,6 +249,30 @@ components/laser.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppSpaceInvaders.dir/build.make CMakeFiles/CppSpaceInvaders.dir/components/laser.cpp.s
 .PHONY : components/laser.cpp.s
 
+components/mysteryship.o: components/mysteryship.cpp.o
+.PHONY : components/mysteryship.o
+
+# target to build an object file
+components/mysteryship.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppSpaceInvaders.dir/build.make CMakeFiles/CppSpaceInvaders.dir/components/mysteryship.cpp.o
+.PHONY : components/mysteryship.cpp.o
+
+components/mysteryship.i: components/mysteryship.cpp.i
+.PHONY : components/mysteryship.i
+
+# target to preprocess a source file
+components/mysteryship.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppSpaceInvaders.dir/build.make CMakeFiles/CppSpaceInvaders.dir/components/mysteryship.cpp.i
+.PHONY : components/mysteryship.cpp.i
+
+components/mysteryship.s: components/mysteryship.cpp.s
+.PHONY : components/mysteryship.s
+
+# target to generate assembly for a file
+components/mysteryship.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppSpaceInvaders.dir/build.make CMakeFiles/CppSpaceInvaders.dir/components/mysteryship.cpp.s
+.PHONY : components/mysteryship.cpp.s
+
 components/obstacle.o: components/obstacle.cpp.o
 .PHONY : components/obstacle.o
 
@@ -345,6 +369,9 @@ help:
 	@echo "... components/laser.o"
 	@echo "... components/laser.i"
 	@echo "... components/laser.s"
+	@echo "... components/mysteryship.o"
+	@echo "... components/mysteryship.i"
+	@echo "... components/mysteryship.s"
 	@echo "... components/obstacle.o"
 	@echo "... components/obstacle.i"
 	@echo "... components/obstacle.s"
