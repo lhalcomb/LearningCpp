@@ -1,8 +1,9 @@
 CMakeFiles/CppSpaceInvaders.dir/components/laser.cpp.o: \
   /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/components/laser.cpp \
-  /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/components/laser.hpp \
+  /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/components/../headerFiles/laser.hpp \
   /opt/homebrew/Cellar/raylib/5.0/include/raylib.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include/stdarg.h \
+  /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/components/../headerFiles/colors.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/iostream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__assert \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__config \

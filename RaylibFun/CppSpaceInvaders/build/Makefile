@@ -129,6 +129,78 @@ CppSpaceInvaders/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppSpaceInvaders.dir/build.make CMakeFiles/CppSpaceInvaders.dir/build
 .PHONY : CppSpaceInvaders/fast
 
+components/alien.o: components/alien.cpp.o
+.PHONY : components/alien.o
+
+# target to build an object file
+components/alien.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppSpaceInvaders.dir/build.make CMakeFiles/CppSpaceInvaders.dir/components/alien.cpp.o
+.PHONY : components/alien.cpp.o
+
+components/alien.i: components/alien.cpp.i
+.PHONY : components/alien.i
+
+# target to preprocess a source file
+components/alien.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppSpaceInvaders.dir/build.make CMakeFiles/CppSpaceInvaders.dir/components/alien.cpp.i
+.PHONY : components/alien.cpp.i
+
+components/alien.s: components/alien.cpp.s
+.PHONY : components/alien.s
+
+# target to generate assembly for a file
+components/alien.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppSpaceInvaders.dir/build.make CMakeFiles/CppSpaceInvaders.dir/components/alien.cpp.s
+.PHONY : components/alien.cpp.s
+
+components/block.o: components/block.cpp.o
+.PHONY : components/block.o
+
+# target to build an object file
+components/block.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppSpaceInvaders.dir/build.make CMakeFiles/CppSpaceInvaders.dir/components/block.cpp.o
+.PHONY : components/block.cpp.o
+
+components/block.i: components/block.cpp.i
+.PHONY : components/block.i
+
+# target to preprocess a source file
+components/block.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppSpaceInvaders.dir/build.make CMakeFiles/CppSpaceInvaders.dir/components/block.cpp.i
+.PHONY : components/block.cpp.i
+
+components/block.s: components/block.cpp.s
+.PHONY : components/block.s
+
+# target to generate assembly for a file
+components/block.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppSpaceInvaders.dir/build.make CMakeFiles/CppSpaceInvaders.dir/components/block.cpp.s
+.PHONY : components/block.cpp.s
+
+components/colors.o: components/colors.cpp.o
+.PHONY : components/colors.o
+
+# target to build an object file
+components/colors.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppSpaceInvaders.dir/build.make CMakeFiles/CppSpaceInvaders.dir/components/colors.cpp.o
+.PHONY : components/colors.cpp.o
+
+components/colors.i: components/colors.cpp.i
+.PHONY : components/colors.i
+
+# target to preprocess a source file
+components/colors.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppSpaceInvaders.dir/build.make CMakeFiles/CppSpaceInvaders.dir/components/colors.cpp.i
+.PHONY : components/colors.cpp.i
+
+components/colors.s: components/colors.cpp.s
+.PHONY : components/colors.s
+
+# target to generate assembly for a file
+components/colors.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppSpaceInvaders.dir/build.make CMakeFiles/CppSpaceInvaders.dir/components/colors.cpp.s
+.PHONY : components/colors.cpp.s
+
 components/game.o: components/game.cpp.o
 .PHONY : components/game.o
 
@@ -176,6 +248,30 @@ components/laser.s: components/laser.cpp.s
 components/laser.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppSpaceInvaders.dir/build.make CMakeFiles/CppSpaceInvaders.dir/components/laser.cpp.s
 .PHONY : components/laser.cpp.s
+
+components/obstacle.o: components/obstacle.cpp.o
+.PHONY : components/obstacle.o
+
+# target to build an object file
+components/obstacle.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppSpaceInvaders.dir/build.make CMakeFiles/CppSpaceInvaders.dir/components/obstacle.cpp.o
+.PHONY : components/obstacle.cpp.o
+
+components/obstacle.i: components/obstacle.cpp.i
+.PHONY : components/obstacle.i
+
+# target to preprocess a source file
+components/obstacle.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppSpaceInvaders.dir/build.make CMakeFiles/CppSpaceInvaders.dir/components/obstacle.cpp.i
+.PHONY : components/obstacle.cpp.i
+
+components/obstacle.s: components/obstacle.cpp.s
+.PHONY : components/obstacle.s
+
+# target to generate assembly for a file
+components/obstacle.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppSpaceInvaders.dir/build.make CMakeFiles/CppSpaceInvaders.dir/components/obstacle.cpp.s
+.PHONY : components/obstacle.cpp.s
 
 components/spaceship.o: components/spaceship.cpp.o
 .PHONY : components/spaceship.o
@@ -234,12 +330,24 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... CppSpaceInvaders"
+	@echo "... components/alien.o"
+	@echo "... components/alien.i"
+	@echo "... components/alien.s"
+	@echo "... components/block.o"
+	@echo "... components/block.i"
+	@echo "... components/block.s"
+	@echo "... components/colors.o"
+	@echo "... components/colors.i"
+	@echo "... components/colors.s"
 	@echo "... components/game.o"
 	@echo "... components/game.i"
 	@echo "... components/game.s"
 	@echo "... components/laser.o"
 	@echo "... components/laser.i"
 	@echo "... components/laser.s"
+	@echo "... components/obstacle.o"
+	@echo "... components/obstacle.i"
+	@echo "... components/obstacle.s"
 	@echo "... components/spaceship.o"
 	@echo "... components/spaceship.i"
 	@echo "... components/spaceship.s"

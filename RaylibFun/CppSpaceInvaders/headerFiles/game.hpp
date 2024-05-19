@@ -1,5 +1,7 @@
 #pragma once
-#include "spaceship.hpp"
+#include "../headerFiles/spaceship.hpp"
+#include "../headerFiles/obstacle.hpp"
+#include "../headerFiles/alien.hpp"
 
 /*
 
@@ -23,8 +25,23 @@ class Game {
         void Update();
         void HandlePlayerInput();
 
-    public: //go back and change this to private later
+    private: //go back and change this to private later
         void DeleteInactiveLasers();
+        std::vector<Obstacle> createObstacles();
+        std::vector<Alien> createAliens();
+        void MoveAliens();
+        void MoveDownAliens(int distance);
+        void AlienShootLaser();
         Spaceship spaceship;
+
+        std::vector<Obstacle> obstacles;
+        std::vector<Alien> aliens;
+        int aliensDirection;
+
+        std::vector<Laser> alienLasers;
+        constexpr static float alienLaserShootInterval = 0.35;
+        float timeLastAlienFired;
+
+
 
 };

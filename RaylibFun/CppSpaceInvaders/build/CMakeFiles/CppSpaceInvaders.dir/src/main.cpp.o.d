@@ -2,7 +2,7 @@ CMakeFiles/CppSpaceInvaders.dir/src/main.cpp.o: \
   /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/src/main.cpp \
   /opt/homebrew/Cellar/raylib/5.0/include/raylib.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include/stdarg.h \
-  /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/src/../Components/spaceship.hpp \
+  /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/src/../headerFiles/spaceship.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/vector \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__algorithm/copy.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__algorithm/copy_move_common.h \
@@ -847,8 +847,13 @@ CMakeFiles/CppSpaceInvaders.dir/src/main.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/cstdarg \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__memory/temp_value.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__split_buffer \
-  /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/src/../Components/laser.hpp \
-  /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/src/../Components/game.hpp \
+  /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/src/../headerFiles/../headerFiles/laser.hpp \
+  /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/src/../headerFiles/game.hpp \
+  /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/src/../headerFiles/../headerFiles/spaceship.hpp \
+  /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/src/../headerFiles/../headerFiles/obstacle.hpp \
+  /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/src/../headerFiles/../headerFiles/block.hpp \
+  /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/src/../headerFiles/../headerFiles/alien.hpp \
+  /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/src/../headerFiles/colors.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/iostream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/istream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/ostream \

@@ -1,4 +1,4 @@
-#include "spaceship.hpp"
+#include "../headerFiles/spaceship.hpp"
 
 
 
@@ -30,7 +30,8 @@ void Spaceship::MoveLeft()
 {
     position.x -= PIXEL_SPEED;
  //The following conditional generates a boundary for the left of screen
-    if (position.x < 0){
+    if(position.x < 0)
+    {
         position.x = 0;
     }
 }

@@ -125,12 +125,72 @@ CMakeFiles/CppSpaceInvaders.dir/components/laser.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/CppSpaceInvaders.dir/components/laser.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/components/laser.cpp -o CMakeFiles/CppSpaceInvaders.dir/components/laser.cpp.s
 
+CMakeFiles/CppSpaceInvaders.dir/components/colors.cpp.o: CMakeFiles/CppSpaceInvaders.dir/flags.make
+CMakeFiles/CppSpaceInvaders.dir/components/colors.cpp.o: /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/components/colors.cpp
+CMakeFiles/CppSpaceInvaders.dir/components/colors.cpp.o: CMakeFiles/CppSpaceInvaders.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/CppSpaceInvaders.dir/components/colors.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CppSpaceInvaders.dir/components/colors.cpp.o -MF CMakeFiles/CppSpaceInvaders.dir/components/colors.cpp.o.d -o CMakeFiles/CppSpaceInvaders.dir/components/colors.cpp.o -c /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/components/colors.cpp
+
+CMakeFiles/CppSpaceInvaders.dir/components/colors.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/CppSpaceInvaders.dir/components/colors.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/components/colors.cpp > CMakeFiles/CppSpaceInvaders.dir/components/colors.cpp.i
+
+CMakeFiles/CppSpaceInvaders.dir/components/colors.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/CppSpaceInvaders.dir/components/colors.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/components/colors.cpp -o CMakeFiles/CppSpaceInvaders.dir/components/colors.cpp.s
+
+CMakeFiles/CppSpaceInvaders.dir/components/block.cpp.o: CMakeFiles/CppSpaceInvaders.dir/flags.make
+CMakeFiles/CppSpaceInvaders.dir/components/block.cpp.o: /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/components/block.cpp
+CMakeFiles/CppSpaceInvaders.dir/components/block.cpp.o: CMakeFiles/CppSpaceInvaders.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/CppSpaceInvaders.dir/components/block.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CppSpaceInvaders.dir/components/block.cpp.o -MF CMakeFiles/CppSpaceInvaders.dir/components/block.cpp.o.d -o CMakeFiles/CppSpaceInvaders.dir/components/block.cpp.o -c /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/components/block.cpp
+
+CMakeFiles/CppSpaceInvaders.dir/components/block.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/CppSpaceInvaders.dir/components/block.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/components/block.cpp > CMakeFiles/CppSpaceInvaders.dir/components/block.cpp.i
+
+CMakeFiles/CppSpaceInvaders.dir/components/block.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/CppSpaceInvaders.dir/components/block.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/components/block.cpp -o CMakeFiles/CppSpaceInvaders.dir/components/block.cpp.s
+
+CMakeFiles/CppSpaceInvaders.dir/components/obstacle.cpp.o: CMakeFiles/CppSpaceInvaders.dir/flags.make
+CMakeFiles/CppSpaceInvaders.dir/components/obstacle.cpp.o: /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/components/obstacle.cpp
+CMakeFiles/CppSpaceInvaders.dir/components/obstacle.cpp.o: CMakeFiles/CppSpaceInvaders.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/CppSpaceInvaders.dir/components/obstacle.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CppSpaceInvaders.dir/components/obstacle.cpp.o -MF CMakeFiles/CppSpaceInvaders.dir/components/obstacle.cpp.o.d -o CMakeFiles/CppSpaceInvaders.dir/components/obstacle.cpp.o -c /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/components/obstacle.cpp
+
+CMakeFiles/CppSpaceInvaders.dir/components/obstacle.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/CppSpaceInvaders.dir/components/obstacle.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/components/obstacle.cpp > CMakeFiles/CppSpaceInvaders.dir/components/obstacle.cpp.i
+
+CMakeFiles/CppSpaceInvaders.dir/components/obstacle.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/CppSpaceInvaders.dir/components/obstacle.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/components/obstacle.cpp -o CMakeFiles/CppSpaceInvaders.dir/components/obstacle.cpp.s
+
+CMakeFiles/CppSpaceInvaders.dir/components/alien.cpp.o: CMakeFiles/CppSpaceInvaders.dir/flags.make
+CMakeFiles/CppSpaceInvaders.dir/components/alien.cpp.o: /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/components/alien.cpp
+CMakeFiles/CppSpaceInvaders.dir/components/alien.cpp.o: CMakeFiles/CppSpaceInvaders.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/CppSpaceInvaders.dir/components/alien.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CppSpaceInvaders.dir/components/alien.cpp.o -MF CMakeFiles/CppSpaceInvaders.dir/components/alien.cpp.o.d -o CMakeFiles/CppSpaceInvaders.dir/components/alien.cpp.o -c /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/components/alien.cpp
+
+CMakeFiles/CppSpaceInvaders.dir/components/alien.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/CppSpaceInvaders.dir/components/alien.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/components/alien.cpp > CMakeFiles/CppSpaceInvaders.dir/components/alien.cpp.i
+
+CMakeFiles/CppSpaceInvaders.dir/components/alien.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/CppSpaceInvaders.dir/components/alien.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/components/alien.cpp -o CMakeFiles/CppSpaceInvaders.dir/components/alien.cpp.s
+
 # Object files for target CppSpaceInvaders
 CppSpaceInvaders_OBJECTS = \
 "CMakeFiles/CppSpaceInvaders.dir/src/main.cpp.o" \
 "CMakeFiles/CppSpaceInvaders.dir/components/game.cpp.o" \
 "CMakeFiles/CppSpaceInvaders.dir/components/spaceship.cpp.o" \
-"CMakeFiles/CppSpaceInvaders.dir/components/laser.cpp.o"
+"CMakeFiles/CppSpaceInvaders.dir/components/laser.cpp.o" \
+"CMakeFiles/CppSpaceInvaders.dir/components/colors.cpp.o" \
+"CMakeFiles/CppSpaceInvaders.dir/components/block.cpp.o" \
+"CMakeFiles/CppSpaceInvaders.dir/components/obstacle.cpp.o" \
+"CMakeFiles/CppSpaceInvaders.dir/components/alien.cpp.o"
 
 # External object files for target CppSpaceInvaders
 CppSpaceInvaders_EXTERNAL_OBJECTS =
@@ -139,9 +199,13 @@ CppSpaceInvaders: CMakeFiles/CppSpaceInvaders.dir/src/main.cpp.o
 CppSpaceInvaders: CMakeFiles/CppSpaceInvaders.dir/components/game.cpp.o
 CppSpaceInvaders: CMakeFiles/CppSpaceInvaders.dir/components/spaceship.cpp.o
 CppSpaceInvaders: CMakeFiles/CppSpaceInvaders.dir/components/laser.cpp.o
+CppSpaceInvaders: CMakeFiles/CppSpaceInvaders.dir/components/colors.cpp.o
+CppSpaceInvaders: CMakeFiles/CppSpaceInvaders.dir/components/block.cpp.o
+CppSpaceInvaders: CMakeFiles/CppSpaceInvaders.dir/components/obstacle.cpp.o
+CppSpaceInvaders: CMakeFiles/CppSpaceInvaders.dir/components/alien.cpp.o
 CppSpaceInvaders: CMakeFiles/CppSpaceInvaders.dir/build.make
 CppSpaceInvaders: CMakeFiles/CppSpaceInvaders.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable CppSpaceInvaders"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable CppSpaceInvaders"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/CppSpaceInvaders.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

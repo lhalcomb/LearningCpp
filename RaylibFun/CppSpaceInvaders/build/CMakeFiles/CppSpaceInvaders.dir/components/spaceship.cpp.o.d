@@ -1,6 +1,6 @@
 CMakeFiles/CppSpaceInvaders.dir/components/spaceship.cpp.o: \
   /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/components/spaceship.cpp \
-  /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/components/spaceship.hpp \
+  /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/components/../headerFiles/spaceship.hpp \
   /opt/homebrew/Cellar/raylib/5.0/include/raylib.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include/stdarg.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/vector \
@@ -847,4 +847,4 @@ CMakeFiles/CppSpaceInvaders.dir/components/spaceship.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/cstdarg \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__memory/temp_value.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__split_buffer \
-  /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/components/laser.hpp
+  /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/components/../headerFiles/../headerFiles/laser.hpp

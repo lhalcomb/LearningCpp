@@ -1,9 +1,6 @@
-CMakeFiles/CppSpaceInvaders.dir/components/game.cpp.o: \
-  /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/components/game.cpp \
-  /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/components/../headerFiles/game.hpp \
-  /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/components/../headerFiles/../headerFiles/spaceship.hpp \
-  /opt/homebrew/Cellar/raylib/5.0/include/raylib.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include/stdarg.h \
+CMakeFiles/CppSpaceInvaders.dir/components/obstacle.cpp.o: \
+  /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/components/obstacle.cpp \
+  /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/components/../headerFiles/obstacle.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/vector \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__algorithm/copy.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__algorithm/copy_move_common.h \
@@ -343,6 +340,7 @@ CMakeFiles/CppSpaceInvaders.dir/components/game.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/wchar.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/wchar.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_mbstate_t.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include/stdarg.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/stdio.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/stdio.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/_stdio.h \
@@ -848,11 +846,5 @@ CMakeFiles/CppSpaceInvaders.dir/components/game.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/cstdarg \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__memory/temp_value.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__split_buffer \
-  /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/components/../headerFiles/../headerFiles/laser.hpp \
-  /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/components/../headerFiles/../headerFiles/obstacle.hpp \
   /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/components/../headerFiles/../headerFiles/block.hpp \
-  /Users/laydenhalcomb/LearningCpp/RaylibFun/CppSpaceInvaders/components/../headerFiles/../headerFiles/alien.hpp \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/iostream \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/istream \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/ostream \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/bitset
+  /opt/homebrew/Cellar/raylib/5.0/include/raylib.h

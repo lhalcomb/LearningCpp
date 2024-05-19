@@ -18,6 +18,10 @@ add_executable(CppSpaceInvaders
     components/game.cpp
     components/spaceship.cpp
     components/laser.cpp
+    components/colors.cpp
+    components/block.cpp
+    components/obstacle.cpp
+    components/alien.cpp
 )
 
 # Link libraries

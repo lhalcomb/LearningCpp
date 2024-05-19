@@ -1,4 +1,6 @@
-#include "laser.hpp"
+#include "../headerFiles/laser.hpp"
+#include "../headerFiles/colors.hpp"
+
 #include <iostream>
 
 Laser::Laser(Vector2 position, int speed)
@@ -10,10 +12,10 @@ Laser::Laser(Vector2 position, int speed)
 
 void Laser::Draw()
 {
-    Color yellow = {243, 216, 63, 255};
+    //Color yellow = {243, 216, 63, 255};
     if (active)
     {
-        DrawRectangle(position.x, position.y, 4, 15, yellow);
+        DrawRectangle(position.x, position.y, 4, 15, Colors::Yellow);
     }
     
 }
@@ -27,11 +29,7 @@ void Laser::Update()
         if (position.y > GetScreenHeight() || position.y < 0)
         {
             active = false;
-            std::cout << "Laserbeam is Inactive" << std::endl;
-        }
-        else
-        {
-            ;
+            //std::cout << "Laserbeam is Inactive" << std::endl;
         }
     }
     
