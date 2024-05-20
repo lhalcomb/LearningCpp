@@ -56,6 +56,9 @@ void Game::Update()
     DeleteInactiveLasers();
     //cout << "Vector Size: " << spaceship.lasers.size() << endl;
     mysteryship.Update();
+
+    CheckForCollisions();
+
 }
 
 void Game::Draw()
@@ -217,4 +220,21 @@ void Game::AlienShootLaser()
         timeLastAlienFired = GetTime();
     }
     
+}
+
+void Game::CheckForCollisions()
+{
+    //Spaceship Lasers
+    for (auto& laser: spaceship.lasers){
+        auto it = aliens.begin();
+        while (it != aliens.end()){
+            if (CheckCollisionRecs(it -> getRect(), laser.getRect()))
+            {
+                it = aliens.erase(it);
+                laser.active = false;
+            } else {
+                it++; 
+            }
+        }
+    }
 }

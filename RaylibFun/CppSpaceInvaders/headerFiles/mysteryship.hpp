@@ -9,6 +9,7 @@ class MysteryShip{
         void Update();
         void Draw();
 
+        Rectangle getRect();
         
 
         void Spawn();

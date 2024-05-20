@@ -34,3 +34,14 @@ void Laser::Update()
     }
     
 }
+
+Rectangle Laser::getRect()
+{
+    Rectangle rect;
+    rect.x = position.x;
+    rect.y = position.y;
+    rect.width = 4;
+    rect.height = 15;
+    
+    return rect;
+}

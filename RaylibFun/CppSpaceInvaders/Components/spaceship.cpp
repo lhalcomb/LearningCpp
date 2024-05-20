@@ -57,3 +57,8 @@ void Spaceship::FireLaser()
         lastFireTime = GetTime();
     }
 }
+
+Rectangle Spaceship::getRect()
+{
+    return {position.x, position.y, float(image.width), float(image.height)}; //Vector that returns these four attributes for the Rectangle object collision for the spaceship 
+}
