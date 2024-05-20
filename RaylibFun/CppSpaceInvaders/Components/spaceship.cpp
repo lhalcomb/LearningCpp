@@ -62,3 +62,11 @@ Rectangle Spaceship::getRect()
 {
     return {position.x, position.y, float(image.width), float(image.height)}; //Vector that returns these four attributes for the Rectangle object collision for the spaceship 
 }
+
+void Spaceship::Reset()
+{
+    position.x = (GetScreenWidth() - image.width) / 2.0f;
+    position.y = GetScreenHeight() - image.height;
+
+    lasers.clear();
+}

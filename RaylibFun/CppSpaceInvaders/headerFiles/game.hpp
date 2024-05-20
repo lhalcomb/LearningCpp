@@ -26,6 +26,11 @@ class Game {
         void Update();
         void HandlePlayerInput();
 
+        int lives;
+        
+        bool run;
+
+
     private: //go back and change this to private later
         void DeleteInactiveLasers();
         std::vector<Obstacle> createObstacles();
@@ -34,6 +39,9 @@ class Game {
         void MoveDownAliens(int distance);
         void AlienShootLaser();
         void CheckForCollisions();
+        void GameOver();
+        void Reset();
+        void InitGame();
         Spaceship spaceship;
 
         std::vector<Obstacle> obstacles;
