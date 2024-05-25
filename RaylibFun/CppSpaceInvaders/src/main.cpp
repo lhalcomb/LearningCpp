@@ -26,10 +26,12 @@ using namespace std;
 int main()
 {   
     //Color gray = {29, 29, 27, 255};
+
+    int offset = 50;
     int windowWidth = 750;
     int windowHeigth = 700;
 
-    InitWindow(windowWidth, windowHeigth, "Space Invaders");
+    InitWindow(windowWidth + offset, windowHeigth + 2 * offset, "Space Invaders");
     SetTargetFPS(60);
 
     Game game;
@@ -48,6 +50,8 @@ int main()
         game.Update();
         BeginDrawing();
         ClearBackground(Colors::Gray);
+        DrawRectangleRoundedLines({10, 10, 780, 780}, 0.18f, 20, 2, Colors::Yellow);
+        DrawLineEx({25, 730}, {755, 730}, 3, Colors::Yellow);
         game.Draw();
 
         EndDrawing();

@@ -23,6 +23,7 @@ add_executable(CppSpaceInvaders
     components/obstacle.cpp
     components/alien.cpp
     components/mysteryship.cpp
+    Font/monogram.ttf
 )
 
 # Link libraries

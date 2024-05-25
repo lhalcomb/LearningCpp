@@ -26,7 +26,7 @@ void Laser::Update()
 
     if (active)
     {
-        if (position.y > GetScreenHeight() || position.y < 0)
+        if (position.y > GetScreenHeight() - 100 || position.y < 25 )
         {
             active = false;
             //std::cout << "Laserbeam is Inactive" << std::endl;
@@ -42,6 +42,6 @@ Rectangle Laser::getRect()
     rect.y = position.y;
     rect.width = 4;
     rect.height = 15;
-    
+
     return rect;
 }
