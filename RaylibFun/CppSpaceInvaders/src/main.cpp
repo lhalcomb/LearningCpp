@@ -26,6 +26,14 @@ File: main.cpp Author: Layden Halcomb
 Description: 
 The following is the file that runs the entire project. 
 
+Things to add: 
+   - Add sounds, maybe something goofy. Personally I love the noise the moving aliens make. 
+   - Make it original. In other words, change the colors, images, font, etc.
+   - Add a start screen. One that displays 1 Player Original or 1 Player AI version, etc.
+   - Add a pause menu
+   - Add Levels and increase the difficulty dependent on the aliens getting closer to player.
+   
+
 */
 
 using namespace std;
