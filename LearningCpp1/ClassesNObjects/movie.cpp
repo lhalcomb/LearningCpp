@@ -1,23 +1,20 @@
 #include <iostream>
 #include <vector>
+#include "movie.hpp"
 
 using namespace std;
 
-class Movie
-{
-    public:
-       string title;
-       string director;
+
        
 
-       Movie(string title, string director, string rating){
+      Movie::Movie(string title, string director, string rating){
         this->title = title;
         this->director = director;
         setRating(rating);
 
        }
 
-       void setRating(string aRating){
+       void Movie::setRating(string aRating){
            
            vector<string> validRatings = {"G", "PG", "PG-13", "R", "NR"};
 
@@ -33,39 +30,17 @@ class Movie
             cout << "Invalid rating" << endl;
        }
 
-       string getRating(){
+       string Movie::getRating(){
         return rating;
        }
 
-       private: //The private access modifier for classes makes it where the class can only access a variable, function, etc. 
-          string rating;
-};
 
 
 //inheritence
-class CartoonShows : public Movie {
-    string TargetAgeGroup;
 
-    public:
-    CartoonShows(string title, string director, string rating, string TargetAgeGroup)
+    CartoonShows::CartoonShows(string title, string director, string rating, string TargetAgeGroup)
      : Movie(title, director, rating){
         this ->TargetAgeGroup = TargetAgeGroup;
      }
-};
 
-int main()
-{
-    Movie PulpFiction("Pulp Fiction", "Quentin Tarintino", "R");
-    cout << PulpFiction.title << endl;
-    PulpFiction.setRating("PG-13");
 
-    cout << PulpFiction.getRating() << endl;
-
-    CartoonShows RickAndMorty("Rick and Morty", "Dan Harmond", "PG-13", "Adults");
-    cout << RickAndMorty.title << endl;
-    RickAndMorty.setRating("R");
-    cout << RickAndMorty.getRating() << endl;
-
-    return 0;
-
-}
