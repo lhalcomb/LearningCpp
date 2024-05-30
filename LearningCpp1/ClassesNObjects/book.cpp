@@ -17,8 +17,11 @@ class Book
         int pages;
 
         //Special function that gets called when we create an object
-        Book()
+        Book(string title, string author, int pages)
         {
+            this->title = title;
+            this->author = author;
+            this->pages = pages;
             cout << "Book created" << endl;
         }
 
@@ -26,12 +29,17 @@ class Book
 
 int main()
 {
-    Book ParableOfTheSower;
+    Book ParableOfTheSower("Parable Of The Sower", "Octavia E. Butler", 329);
     ParableOfTheSower.title = "Parable Of The Sower";
     ParableOfTheSower.author = "Octavia E. Butler";
     ParableOfTheSower.pages = 329;
 
     cout << ParableOfTheSower.title << endl;
+
+
+    Book NineteenEigthyFour("1984", "George Orwell", 244);
+
+    cout << NineteenEigthyFour.author << endl;
 
     return 0;
 }
