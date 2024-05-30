@@ -27,6 +27,8 @@ class Game {
         void HandlePlayerInput();
 
         int lives;
+        int score;
+        int highscore;
         
         bool run;
 
@@ -55,6 +57,10 @@ class Game {
         MysteryShip mysteryship;
         float mysterShipSpawnInterval;
         float timeLastSpawned;
+
+        void checkForHighScore();
+        void saveHighscoreToFile(int highscore);
+        int loadHighscoreFromFile();
 
 
 

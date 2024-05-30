@@ -1,6 +1,13 @@
 //The initial game library that is being used. 
 #include <raylib.h>
 
+/*
+
+ The string library ended up being useful for conversion purposes.
+ This was for the score mechanic. 
+
+*/
+#include <string>
 
 //Project oriented header files 
 #include "../headerFiles/spaceship.hpp"
@@ -23,6 +30,14 @@ The following is the file that runs the entire project.
 
 using namespace std;
 
+string FormatWithLeadingZeros( int number, int width)
+{
+    string numberText = to_string(number);
+    int leadingZeros = width - numberText.length();
+
+    return numberText = string(leadingZeros, '0') + numberText;
+}
+
 int main()
 {   
     //Color gray = {29, 29, 27, 255};
@@ -33,6 +48,9 @@ int main()
 
     InitWindow(windowWidth + offset, windowHeigth + 2 * offset, "Space Invaders");
     SetTargetFPS(60);
+
+    Font font = LoadFontEx("../Font/monogram.ttf", 64, 0, 0);
+    Texture2D spaceshipImage = LoadTexture("../Graphics/spaceship.png");
 
     Game game;
     
@@ -52,8 +70,31 @@ int main()
         ClearBackground(Colors::Gray);
         DrawRectangleRoundedLines({10, 10, 780, 780}, 0.18f, 20, 2, Colors::Yellow);
         DrawLineEx({25, 730}, {755, 730}, 3, Colors::Yellow);
-        game.Draw();
+        
 
+        if (game.run) {
+            DrawTextEx(font, "LEVEL 01", {570, 740}, 34, 2, Colors::Yellow);
+        }else{ 
+            DrawTextEx(font, "GAME OVER", {570, 740}, 34, 2, Colors::Yellow);
+        }
+
+
+        float x = 50.0;
+
+        for (int i = 0; i < game.lives; i++){
+                DrawTextureV(spaceshipImage, {x, 745}, WHITE);
+                x += 50;
+        }
+
+        DrawTextEx(font, "SCORE ", {50, 15}, 34, 2, Colors::Yellow);
+        string scoreText = FormatWithLeadingZeros(game.score, 5);
+        DrawTextEx(font, scoreText.c_str(), {50, 40}, 34, 2, Colors::Yellow);
+
+        DrawTextEx(font, "HIGH-SCORE", {570, 15}, 34, 2, Colors::Yellow);
+        string highscoreText = FormatWithLeadingZeros(game.highscore, 5);
+        DrawTextEx(font, highscoreText.c_str(), {655, 40}, 34, 2, Colors::Yellow);
+
+        game.Draw();
         EndDrawing();
 
     }

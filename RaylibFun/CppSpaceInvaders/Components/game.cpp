@@ -1,5 +1,6 @@
 #include "../headerFiles/game.hpp"
 #include <iostream>
+#include <fstream>
 
 
 
@@ -239,6 +240,16 @@ void Game::CheckForCollisions()
         while (it != aliens.end()){
             if (CheckCollisionRecs(it -> getRect(), laser.getRect()))
             {
+                //Scoring system for the different types of aliens hit
+                if (it -> type == 1){
+                    score += 100;
+                }else if (it -> type == 2){
+                    score += 200;
+                }else if (it -> type == 3){
+                    score += 300;
+                }
+                checkForHighScore();
+
                 it = aliens.erase(it);
                 laser.active = false;
             } else {
@@ -264,6 +275,8 @@ void Game::CheckForCollisions()
         {
             mysteryship.alive = false;
             laser.active = false;
+            score += 500;
+            checkForHighScore();
         }
     }
 
@@ -337,6 +350,9 @@ void Game::InitGame()
     mysterShipSpawnInterval = GetRandomValue(10, 20);
     lives = 3;
     run = true;
+    score = 0;
+    highscore = loadHighscoreFromFile();;
+
 }
 
 void Game::Reset()
@@ -344,6 +360,43 @@ void Game::Reset()
     spaceship.Reset();
     aliens.clear();
     alienLasers.clear();
-    obstacles.clear(); 
+    obstacles.clear();
+    
 
+}
+
+void Game::checkForHighScore()
+{
+    if (score > highscore){
+        highscore = score;
+        saveHighscoreToFile(highscore);
+    }
+}
+
+void Game::saveHighscoreToFile(int highscore)
+{
+    ofstream highscoreFile("highscore.txt");
+    if(highscoreFile.is_open()){
+        highscoreFile << highscore;
+        highscoreFile.close();
+    }else{
+        cerr << "Unable to open and save highscore to file" << endl;
+    }
+
+}
+
+int Game::loadHighscoreFromFile()
+{
+    int loadedHighscore = 0;
+
+    ifstream highscoreFile("highscore.txt");
+    if(highscoreFile.is_open())
+    {
+        highscoreFile >> loadedHighscore;
+        highscoreFile.close();
+    }else{
+        cerr << "Unable to open and load highscore from file" << endl;
+    }
+
+    return loadedHighscore;
 }
