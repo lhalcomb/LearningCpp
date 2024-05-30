@@ -26,10 +26,16 @@ int main()
    std::cout<< "The value of the dereferenced pointer is: " << *num_address << '\n'; 
 
    *num_address = num * 2;
-   std::cout <<"The value of the dereferenced pointer is now: " << *num_address;
+   std::cout <<"The value of the dereferenced pointer is now: " << *num_address <<endl;
 
    int anotherNum = 44;
    int *anotherNum_address;
+
+   string name = "Layden";
+   cout << name << endl;
+   string *name_address = &name;
+   cout << name_address << endl;
+   cout << name << endl;
 
    anotherNum_address = &anotherNum;
 
