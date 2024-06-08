@@ -6,6 +6,9 @@ project(CppSpaceInvaders)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
+# Manually set the SDK path if needed
+set(CMAKE_OSX_SYSROOT /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk)
+
 # Add include directories
 include_directories(/opt/homebrew/Cellar/raylib/5.0/include)
 
