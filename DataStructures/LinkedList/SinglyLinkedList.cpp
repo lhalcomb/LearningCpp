@@ -22,10 +22,7 @@ class SinglyLinkedList{
     private:
         Node* head; //head of the list pointed to a reference in memory from the constructor 'node'
     public: 
-        SinglyLinkedList()
-        {
-            head = nullptr;
-        }
+        SinglyLinkedList(): head(nullptr) {}
 
         void insertNodeAtBeginning(int val){
             Node* newNode = new Node(val);
@@ -48,6 +45,29 @@ class SinglyLinkedList{
             
         }
 
+        void deleteNode(int val){
+            if (head == nullptr) return;
+
+            if (head->data == val){
+                Node* temp = head;
+                head = head->next;
+                delete temp;
+                return;
+            }
+            Node* temp = head;
+
+            while (temp->next != nullptr){
+                if (temp->next->data == val){
+                    Node* nodeToDelete = temp->next;
+                    temp->next = temp->next->next;
+                    delete nodeToDelete;
+                    return;
+                }
+                temp = temp->next;
+            }
+
+        }
+
         void printList(){
             Node* temp = head;
             while (temp != nullptr){
@@ -55,6 +75,16 @@ class SinglyLinkedList{
                 temp = temp->next;
             }
             cout << endl;
+        }
+
+        void deleteMemory(){
+            Node* temp = head;
+            while (temp != nullptr){
+                Node* nextNode = temp->next;
+                delete temp;
+                temp = nextNode;
+            }
+            head = nullptr;
         }
         
 };
@@ -69,6 +99,11 @@ int main(){
             sll.insertNodeAtEnd(i);
         }
     }
-
+    
     sll.printList();
+    sll.deleteNode(10);
+    sll.printList();
+    
+    sll.deleteMemory();
+
 }
