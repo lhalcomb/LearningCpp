@@ -1,0 +1,3 @@
+/Users/laydenhalcomb/LearningCpp/RaylibFun/ArchimedeanSpiral/build/CMakeFiles/ArchimedianSpiral.dir
+/Users/laydenhalcomb/LearningCpp/RaylibFun/ArchimedeanSpiral/build/CMakeFiles/edit_cache.dir
+/Users/laydenhalcomb/LearningCpp/RaylibFun/ArchimedeanSpiral/build/CMakeFiles/rebuild_cache.dir
