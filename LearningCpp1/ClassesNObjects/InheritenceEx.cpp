@@ -1,10 +1,11 @@
 #include <iostream>
+#include <string>
 
 using namespace std;
 
 class Person{
     public:
-          Person(std::string &aname): name{aname}{};
+          explicit Person(const std::string &aname): name{aname}{};
 
           std::string getName() const {return name;}
 
@@ -15,7 +16,7 @@ class Person{
 
 class Student: public Person{
     public:
-        Student(std::string &aname, int asemester): Person::Person{aname}, semester{asemester}{}
+        Student(const std::string &aname, int asemester): Person(aname), semester{asemester}{}
         int getSemester(){
             return semester;
         }
@@ -24,10 +25,10 @@ class Student: public Person{
 };
 
 int main(){
-    Person Person;
-    Student Student;
+    Person person("Layden");
+    Student stud("Layden", 5);
     
-    Person.getName();
-    Student.getSemester();
+    std::cout << person.getName() << std::endl;
+    std::cout << stud.getSemester() << std::endl;
     return 0;
 }
