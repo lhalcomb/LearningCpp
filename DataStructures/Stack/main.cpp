@@ -10,7 +10,7 @@ int main()
 
     std::cout << stack.pop() << "Popped from stack" << std::endl;
 
-    std::cout << "Top element is " << stack.peek(int ) << endl;
+    std::cout << "Top element is " << stack.peek(2) << endl;
     std::cout << "Is stack full? " << stack.isFull() << endl;
     std::cout << "Is stack empty? " << stack.isEmpty() << endl;
 

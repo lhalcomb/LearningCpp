@@ -7,12 +7,13 @@
 class Stack{
 
     private: 
-        static const int maxSize = 1000;
+        
         int top;
-        int arr[maxSize];
+        static int arr[];
     
     public:
         Stack();
+        static const int maxSize = 1000;
         void push(int val);
         int pop();
         int peek(int pos);
