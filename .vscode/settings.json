@@ -1,20 +1,61 @@
 {
     "C_Cpp.errorSquiggles": "disabled",
     "files.associations": {
+<<<<<<< HEAD
+        "atomic": "cpp",
+        "bit": "cpp",
+=======
         "array": "cpp",
         "atomic": "cpp",
         "bit": "cpp",
         "*.tcc": "cpp",
+>>>>>>> 8bea6822b10f1a8499b4a4e4ca6026ff8ebcb8b6
         "cctype": "cpp",
         "clocale": "cpp",
         "cmath": "cpp",
         "compare": "cpp",
         "concepts": "cpp",
+<<<<<<< HEAD
+=======
         "cstdarg": "cpp",
+>>>>>>> 8bea6822b10f1a8499b4a4e4ca6026ff8ebcb8b6
         "cstddef": "cpp",
         "cstdint": "cpp",
         "cstdio": "cpp",
         "cstdlib": "cpp",
+<<<<<<< HEAD
+        "cstring": "cpp",
+        "ctime": "cpp",
+        "cwchar": "cpp",
+        "exception": "cpp",
+        "initializer_list": "cpp",
+        "ios": "cpp",
+        "iosfwd": "cpp",
+        "iostream": "cpp",
+        "istream": "cpp",
+        "iterator": "cpp",
+        "limits": "cpp",
+        "memory": "cpp",
+        "new": "cpp",
+        "ostream": "cpp",
+        "stdexcept": "cpp",
+        "streambuf": "cpp",
+        "system_error": "cpp",
+        "tuple": "cpp",
+        "type_traits": "cpp",
+        "typeinfo": "cpp",
+        "utility": "cpp",
+        "xfacet": "cpp",
+        "xiosbase": "cpp",
+        "xlocale": "cpp",
+        "xlocinfo": "cpp",
+        "xlocnum": "cpp",
+        "xmemory": "cpp",
+        "xstddef": "cpp",
+        "xstring": "cpp",
+        "xtr1common": "cpp",
+        "xutility": "cpp"
+=======
         "cwchar": "cpp",
         "cwctype": "cpp",
         "deque": "cpp",
@@ -46,5 +87,6 @@
         "stdexcept": "cpp",
         "streambuf": "cpp",
         "typeinfo": "cpp"
+>>>>>>> 8bea6822b10f1a8499b4a4e4ca6026ff8ebcb8b6
     }
 }
