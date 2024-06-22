@@ -5,7 +5,7 @@ int main()
     
     //Integer Types
     std::cout<<"Integer Types: "<<std::endl;
-    int x = 123;
+    unsigned int x = 123;
     int y = -246;
     std::cout <<"The value of x is: " <<x<< ", the value of y is : " << y<<std::endl;
 

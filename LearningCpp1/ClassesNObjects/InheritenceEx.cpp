@@ -5,7 +5,8 @@ using namespace std;
 
 class Person{
     public:
-          explicit Person(const std::string &aname): name{aname}{};
+          explicit Person(const std::string &aname): name{aname} {
+          };
 
           std::string getName() const {return name;}
 
@@ -16,7 +17,7 @@ class Person{
 
 class Student: public Person{
     public:
-        Student(const std::string &aname, int asemester): Person(aname), semester{asemester}{}
+        Student(const std::string &aname, int asemester): Person(aname), semester{asemester} {}
         int getSemester(){
             return semester;
         }

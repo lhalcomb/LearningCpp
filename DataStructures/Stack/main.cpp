@@ -18,7 +18,9 @@ int main()
     for (int i = 0; i < Stack::maxSize; ++i) {
         stack.push(i);
     }
+
     cout << "Is stack full after pushing maxSize elements? " << stack.isFull() << endl;
+    
 
 
     return 0;
