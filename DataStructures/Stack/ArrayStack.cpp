@@ -1,9 +1,11 @@
 #include "ArrayStack.hpp"
 
+int Stack::arr[maxSize]; 
+
 Stack::Stack(){
     top = -1;
     
-    for (int = 0; i < maxSize; i++){
+    for (int i = 0; i < maxSize; i++){
         arr[i] = 0;
     }
 }
@@ -36,13 +38,13 @@ int Stack::pop()
         int popVal = arr[top];
         arr[top] = 0; 
         top--;
-        return popValue; 
+        return popVal; 
     }
 }
 
 int Stack::count()
 {
-    return (top+1)
+    return (top+1);
 }
 
 int Stack::peek(int pos)
