@@ -5,9 +5,14 @@ using namespace std;
 void swapv(int *initial_num, int *new_number){
 
   int temp;
+  cout << " The address of the first variable is: " << &initial_num << endl;
+  cout << " The address of the second variable is: " << &new_number << endl;
   temp = *initial_num;
+  cout << " The address of temp pointing to the first variable is: " << &temp << endl;
   *initial_num = *new_number;
+  cout << " The address of the first variable is: " << &initial_num << endl;
   *new_number = temp;
+  cout << " The address of the second variable is: " << &new_number << endl; 
 
 }
 int main()
@@ -49,7 +54,7 @@ int main()
    cin >> num2;
 
    swapv(&num1, &num2);
-
+   cout << "The size of num1 is: " << sizeof(num1) << " bytes\n "; 
    cout <<"After swapping, first number is : " << num1 <<endl;
    cout << "After  swapping, second number is : " << num2 << endl;
 
