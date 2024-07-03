@@ -1,0 +1,11 @@
+# CMakeLists_win.txt
+
+# Add include directories specific to MinGW or Windows paths
+include_directories(C:/raylib/w64devkit/x86_64-w64-mingw32/include)
+
+# Add link directories specific to MinGW or Windows paths
+link_directories(C:/raylib/w64devkit/x86_64-w64-mingw32/lib/ )
+
+# Link libraries specific to MinGW or Windows
+target_link_libraries(ArchimedianSpiral C:/raylib/w64devkit/x86_64-w64-mingw32/lib/libraylib.a winmm)
+

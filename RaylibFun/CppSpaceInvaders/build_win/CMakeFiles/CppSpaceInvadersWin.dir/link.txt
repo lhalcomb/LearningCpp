@@ -1,0 +1,3 @@
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\CppSpaceInvadersWin.dir/objects.a
+C:\LLVM\bin\llvm-ar.exe qc CMakeFiles\CppSpaceInvadersWin.dir/objects.a @CMakeFiles\CppSpaceInvadersWin.dir\objects1.rsp
+C:\MinGW\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\CppSpaceInvadersWin.dir/objects.a -Wl,--no-whole-archive -o CppSpaceInvadersWin.exe -Wl,--out-implib,libCppSpaceInvadersWin.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\CppSpaceInvadersWin.dir\linkLibs.rsp

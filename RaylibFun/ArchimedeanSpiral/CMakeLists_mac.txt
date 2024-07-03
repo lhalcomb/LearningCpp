@@ -1,0 +1,10 @@
+# CMakeLists_mac.txt
+
+# Add include directories
+include_directories(/opt/homebrew/Cellar/raylib/5.0/include)
+
+# Add link directories
+link_directories(/opt/homebrew/Cellar/raylib/5.0/lib)
+
+# Link libraries
+target_link_libraries(ArchimedianSpiral raylib)

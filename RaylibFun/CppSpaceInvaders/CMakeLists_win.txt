@@ -1,0 +1,34 @@
+# CMakeLists_win.txt
+
+# Specify the minimum required CMake version
+cmake_minimum_required(VERSION 3.10)
+
+# Set the project name
+project(CppSpaceInvaders)
+
+# Specify the C++ standard
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+
+# Add include directories specific to MinGW or Windows paths
+include_directories(C:/raylib/w64devkit/x86_64-w64-mingw32/include)
+
+# Add link directories specific to MinGW or Windows paths
+link_directories(C:/raylib/w64devkit/x86_64-w64-mingw32/lib/)
+
+# Define the executable and list source files
+add_executable(CppSpaceInvadersWin
+    src/main.cpp
+    components/game.cpp
+    components/spaceship.cpp
+    components/laser.cpp
+    components/colors.cpp
+    components/block.cpp
+    components/obstacle.cpp
+    components/alien.cpp
+    components/mysteryship.cpp
+    Font/monogram.ttf
+)
+
+# Link libraries (raylib in this case)
+target_link_libraries(CppSpaceInvadersWin raylib)

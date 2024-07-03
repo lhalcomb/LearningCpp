@@ -1,0 +1,4 @@
+C:/Users/layde/C++ Folder/LearningCpp/RaylibFun/CppSpaceInvaders/build_win/CMakeFiles/CppSpaceInvaders.dir
+C:/Users/layde/C++ Folder/LearningCpp/RaylibFun/CppSpaceInvaders/build_win/CMakeFiles/CppSpaceInvadersWin.dir
+C:/Users/layde/C++ Folder/LearningCpp/RaylibFun/CppSpaceInvaders/build_win/CMakeFiles/edit_cache.dir
+C:/Users/layde/C++ Folder/LearningCpp/RaylibFun/CppSpaceInvaders/build_win/CMakeFiles/rebuild_cache.dir

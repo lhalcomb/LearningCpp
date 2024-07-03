@@ -1,3 +1,5 @@
+# Shared CMakeLists.txt
+
 cmake_minimum_required(VERSION 3.10)
 project(ArchimedianSpiral)
 
@@ -5,16 +7,12 @@ project(ArchimedianSpiral)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-# Add include directories
-include_directories(/opt/homebrew/Cellar/raylib/5.0/include)
+# Define the executable and link libraries
+add_executable(ArchimedianSpiral main.cpp)
 
-# Add link directories
-link_directories(/opt/homebrew/Cellar/raylib/5.0/lib)
-
-# Define the executable
-add_executable(ArchimedianSpiral
-    main.cpp
-)
-
-# Link libraries
-target_link_libraries(ArchimedianSpiral raylib)
+# Include platform-specific configurations
+if(APPLE)
+    include(${CMAKE_SOURCE_DIR}/CMakeLists_mac.txt)
+elseif(WIN32)
+    include(${CMAKE_SOURCE_DIR}/CMakeLists_win.txt)
+endif()

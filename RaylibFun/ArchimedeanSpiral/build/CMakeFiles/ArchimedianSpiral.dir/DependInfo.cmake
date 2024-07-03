@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/laydenhalcomb/LearningCpp/RaylibFun/ArchimedeanSpiral/main.cpp" "CMakeFiles/ArchimedianSpiral.dir/main.cpp.o" "gcc" "CMakeFiles/ArchimedianSpiral.dir/main.cpp.o.d"
+  "C:/Users/layde/C++ Folder/LearningCpp/RaylibFun/ArchimedeanSpiral/main.cpp" "CMakeFiles/ArchimedianSpiral.dir/main.cpp.obj" "gcc" "CMakeFiles/ArchimedianSpiral.dir/main.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
