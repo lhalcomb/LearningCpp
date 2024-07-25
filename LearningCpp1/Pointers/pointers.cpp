@@ -1,6 +1,9 @@
 #include <iostream>
+#include <vector>
 
 using namespace std;
+
+//passsing pointers through functions
 
 void swapv(int *initial_num, int *new_number){
 
@@ -48,6 +51,76 @@ void swapUsingArithmetic(int *initial_num, int *new_number){
   */
 }
 
+void double_data(int *int_ptr){
+  *int_ptr *= 2;
+}
+
+void display(vector<string> *v){
+  
+  for (auto str: *v)
+  {
+    cout << str << " ";
+  }
+  cout << "\n"; 
+
+}
+
+void display_array(const int *const array, size_t size){
+  for (size_t i = 0; i < size; ++i) {
+    cout << array[i] << " ";
+  } 
+  cout << endl;
+}
+
+//Returning Pointers from functions
+
+//Finds the max between two integers and returns that max. Utilizes pointers 
+int *max(int *int_ptr1, int *int_ptr2)
+{
+  if (*int_ptr1 > *int_ptr2){
+    return int_ptr1;
+  }else{
+    return int_ptr2;
+  }
+}
+
+
+//returning dynamically allocated memory
+
+int *create_array(size_t size, int init_value = 0){
+  int *new_storage {nullptr};
+
+  new_storage = new int[size];
+  for (size_t i {0}; i < size; ++i){
+    //*(new_storage + i) = init_value; 
+
+    //init_value++;
+    new_storage[i] = init_value;
+  }
+  return new_storage; 
+
+}
+
+void multiply_with_pointer(int *ptr, int multiplier){
+    *ptr *= multiplier;
+    
+}
+
+void reverse_array(int* arr, int size) {
+   
+    int *beginning = arr; 
+    int *end = arr + size - 1;
+    
+    while (beginning < end){
+        int temp = *beginning; 
+        *beginning = *end;
+        *end = temp; 
+        
+        beginning++;
+        end--;
+    }
+    
+}
 
 int main()
 {
@@ -110,8 +183,47 @@ int main()
   std::cout << "Initial addresses: num1 = " << &num1 << ", num2 = " << &num2 << std::endl; 
   swapUsingArithmetic(&num1, &num2);
   std::cout << "Final addresses: num1 = " << &num1 << ", num2 = " << &num2 << std::endl;
-
   
-   return 0;
+  int val {10};
+  cout << "         " << endl; 
+  cout << val << endl;
+  double_data(&val);
 
-}
+  cout << val << endl; 
+  cout << "         " << endl; 
+  cout << "         " << endl; 
+  cout << "         " << endl; 
+  vector<string> superheros {"Superman", "Batman", "Spiderman"};
+
+  display(&superheros);
+
+  cout << "         " << endl; 
+  cout << "         " << endl; 
+  cout << "         " << endl; 
+
+  //To call a pointer function, it would look like as follows
+
+  int a{100};
+  int b{200};
+  int *max_ptr = nullptr;
+  max_ptr = max(&a, &b);
+  cout << *max_ptr << endl; //200
+
+  //use of the create_array pointer function above
+  int *my_array; //will be allocated by the function 
+
+  my_array = create_array(100,20); // create the array 
+ 
+  display_array(my_array, 10); 
+
+  delete [] my_array; //frees the storage
+
+
+  int ptr_int = 1;
+  int multiplier = 3;
+  //multiply_with_pointer(*ptr_int, multiplier);
+   
+
+  return 0;
+
+} 
