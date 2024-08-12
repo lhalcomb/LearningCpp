@@ -96,6 +96,8 @@ int *create_array(size_t size, int init_value = 0){
 
     //init_value++;
     new_storage[i] = init_value;
+
+    init_value++;
   }
   return new_storage; 
 
@@ -120,6 +122,17 @@ void reverse_array(int* arr, int size) {
         end--;
     }
     
+}
+
+void reverse_string(char[] s){
+
+  int n = s.size();
+  for (int i = 0; i = n/2; i++){
+    char temp = s[i];
+    s[i] = s[n-i-1];
+    s[n-i-1] = temp;
+  }
+
 }
 
 int main()
@@ -212,8 +225,11 @@ int main()
   //use of the create_array pointer function above
   int *my_array; //will be allocated by the function 
 
-  my_array = create_array(100,20); // create the array 
+  my_array = create_array(100); // create the array 
  
+  display_array(my_array, 10); 
+
+  reverse_array(my_array, 10);
   display_array(my_array, 10); 
 
   delete [] my_array; //frees the storage
