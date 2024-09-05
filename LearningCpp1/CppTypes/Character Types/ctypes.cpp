@@ -20,6 +20,10 @@ int main()
     e = 97; //Due to every character literal being represented as an integer, this is the same as 'a'.
     std::cout <<e <<std::endl<<std::endl; 
 
+    char s[20] = "hello";
+    std::cout << s << std::endl;
+    std::cout << s[21] << std::endl;
+
     return 0;
 }
 

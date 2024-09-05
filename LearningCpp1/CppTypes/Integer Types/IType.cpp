@@ -28,5 +28,21 @@ int main()
     int d = 012; //octal literal
     int e = 0XA; //hexadecimal literal
 
+
+    short x1 = 35250; //changes value if overflowed bits
+    short y1 = 35250; // same here 
+
+    static_cast<int>(x1);
+    static_cast<int>(y1);
+
+    std::cout << x1 + y1 << std::endl;
+    std::cout << x1 << std::endl;
+    std::cout << y1 << std::endl;
+
+    float PI = 3.14;
+    double PI1 = 3.1415962;
+
+    std::cout << typeid(PI + PI1).name() << std::endl;
+
     return 0;
 }
