@@ -24,6 +24,8 @@ int main()
     std::cout << s << std::endl;
     std::cout << s[21] << std::endl;
 
+    
+
     return 0;
 }
 
