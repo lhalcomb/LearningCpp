@@ -1,57 +1,100 @@
+
+
+//Procedural Programming - Focuses on a sequence of instructions that operate on data
+
+//Object Oriented Programming - Centers around objects that encapsulate data and behaviors
+
+//Generic Programming - Focuses on writing reusable and type-independent code
+
+//Functional Programming - Emphasizes immmutability, first-class functions, and declarative programming
+
+//Concurrent Programming - Enables execution of code in parallel or asynchronously 
+
+//Declararative Programming - Focuses on the "what" rather than the "how" of problem-solving
+
+//Meta Programming - Writing code that generates orn manipulates other code at compile-time or runtime
+
+//Systems Programming - Direct interaction with hardware and system resources
+
+//Data=Oriented Programming - Organizes and structures programs based on data layout and access patterns for performance
+
+//Will show example of Procedural, Object Oriented, and Generic
+
+
+//I.e. A program to manage a collection of shapes (circles and rectangles) and calculate their areas.
 #include <iostream>
 #include <vector>
+#include <memory>
+#include <cmath>
 
-//template <typename T>
-using namespace std;
+using namespace std; 
 
-class Sorter {
 
+// Generic Programming: Template for a function
+template <typename T>
+T getMax(const T& a, const T& b) {
+    return (a > b) ? a : b;
+}
+
+// OOP: Abstract base class (interface for shapes)
+class Shape {
 public:
-
-    void sort(vector<int>& data) {
-
-        // Implementation using a sorting algorithm like quicksort
-
-        for (int i = 0; i < data.size() - 1; ++i) {
-
-            for (int j = i + 1; j < data.size(); ++j) {
-
-                if (data[i] > data[j]) {
-
-                    swap(data[i], data[j]);
-
-                }
-
-            }
-
-        }
-
-    }
-
+    virtual double getArea() const = 0; // Pure virtual function
+    virtual void display() const = 0;   // Pure virtual function
+    virtual ~Shape() = default;        // Virtual destructor
 };
 
+// OOP: Derived class for Circle
+class Circle : public Shape {
+    private:
+        double radius;
+    public:
+        Circle(double r) : radius(r) {}
+        double getArea() const override {
+            return M_PI * radius * radius; // Area of circle
+        }
+        void display() const override {
+            cout << "Circle with radius " << radius << ", Area: " << getArea() << endl;
+        }
+};
 
+// OOP: Derived class for Rectangle
+class Rectangle : public Shape {
+    private:
+        double width, height;
+    public:
+        Rectangle(double w, double h) : width(w), height(h) {}
+            double getArea() const override {
+                return width * height; // Area of rectangle
+        }
+        void display() const override {
+           cout << "Rectangle with width " << width << " and height " << height << ", Area: " << getArea() << endl;
+        }
+};
+
+// Procedural Programming: Function to process shapes
+void processShapes(const vector<shared_ptr<Shape>>& shapes) {
+    cout << "Processing Shapes...\n";
+    for (const auto& shape : shapes) {
+        shape->display();
+    }
+    // Find and display the largest area
+    double maxArea = 0.0;
+    for (const auto& shape : shapes) {
+        maxArea = getMax(maxArea, shape->getArea());
+    }
+    cout << "Largest Area: " << maxArea << "\n";
+}
 
 int main() {
+    // Procedural Programming: Main flow of the program
+    vector<shared_ptr<Shape>> shapes;
+    shapes.push_back(make_shared<Circle>(5.0));
+    shapes.push_back(make_shared<Rectangle>(4.0, 6.0));
+    shapes.push_back(make_shared<Circle>(3.0));
+    shapes.push_back(make_shared<Rectangle>(7.0, 2.0));
 
-    vector<int> numbers { 5, 2, 8, 1, 3 };
-
-    Sorter sorter;
-
-    sorter.sort(numbers);
-
-    
-
-    for (int num : numbers) {
-
-        cout << num << " ";
-
-    }
-
-    cout << '\n';
-
-
+    processShapes(shapes);
 
     return 0;
-
 }
