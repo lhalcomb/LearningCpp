@@ -49,7 +49,9 @@ class Circle : public Shape {
     private:
         double radius;
     public:
-        Circle(double r) : radius(r) {}
+        Circle(double r)/*  : radius(r) */ {
+            this->radius = r;
+        }
         double getArea() const override {
             return M_PI * radius * radius; // Area of circle
         }
@@ -71,6 +73,13 @@ class Rectangle : public Shape {
            cout << "Rectangle with width " << width << " and height " << height << ", Area: " << getArea() << endl;
         }
 };
+
+/*
+class Rectangle:
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+*/
 
 // Procedural Programming: Function to process shapes
 void processShapes(const vector<shared_ptr<Shape>>& shapes) {
