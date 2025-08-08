@@ -37,8 +37,9 @@ Window::Window(int width, int height, const std::string& title){
         std::exit(EXIT_FAILURE);
     }
 
-    glViewport(0, 0, width, height);
-
+    int fbSizeX, fbSizeY; 
+    glfwGetFramebufferSize(window, &fbSizeX, &fbSizeY);
+     glViewport(0, 0, fbSizeX, fbSizeY);
     glfwSetFramebufferSizeCallback(window, [](GLFWwindow*, int w, int h) { // openGL frame buffer that setes the size of the window. The scary bit is an unnamed lambda function "[](GLFWwindow*, int w, int h) -> glViewport(0,0,w,h)"
         glViewport(0, 0, w, h);
     });

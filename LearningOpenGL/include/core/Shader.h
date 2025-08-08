@@ -14,5 +14,5 @@ public:
 private:
     GLuint ID;
     std::string loadShaderSource(const std::string& path);
-    void compileShader(GLuint shader, const std::string& source);
+    GLuint compileShader(GLuint shader, const std::string& source);
 };
