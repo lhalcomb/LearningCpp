@@ -25,6 +25,8 @@ set(CORE_SOURCES
     src/glad.c
     src/core/Window.cpp
     src/core/Shader.cpp
+    src/core/Triangle.cpp
+    src/core/rectangle.cpp
 )
 
 # Function to create an example executable
@@ -44,5 +46,8 @@ endfunction()
 add_example(WindowExecute)
 add_example(GLWindow)
 add_example(HelloTriangle)
-add_example(MultipleTriangles)
+add_example(HelloRectangle)
 add_example(RefHelloTriangle)
+add_example(RefHelloRectangle)
+
+
