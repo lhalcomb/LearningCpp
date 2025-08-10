@@ -24,8 +24,25 @@ int main(){
          0.5f, -0.5f, 0.0f, // right 
          0.0f,  0.5f, 0.0f  // top   
     };
+
+    // float vertices1[] = {
+    //     // first triangle
+    //     -0.9f, -0.5f, 0.0f,  // left 
+    //     -0.0f, -0.5f, 0.0f,  // right
+    //     -0.45f, 0.5f, 0.0f,  // top 
+        
+    // };
+
+    // float vertices2[] = {
+    //     // second triangle
+    //      0.0f, -0.5f, 0.0f,  // left
+    //      0.9f, -0.5f, 0.0f,  // right
+    //      0.45f, 0.5f, 0.0f   // top 
+    // };
     //Call the triangle object
     Triangle triangle(vertices, sizeof(vertices), false);
+    //Triangle triangle1(vertices1, sizeof(vertices1), false);
+    //Triangle triangle2(vertices2, sizeof(vertices2), false);
 
      // Main loop
     while (!window.shouldClose()) {
@@ -37,6 +54,8 @@ int main(){
 
         shader.use();
         triangle.draw();
+        //triangle1.draw();
+        //triangle2.draw();
         
         window.swapBuffers();
         window.pollEvents();

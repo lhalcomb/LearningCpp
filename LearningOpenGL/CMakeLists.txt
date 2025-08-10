@@ -42,6 +42,20 @@ function(add_example name)
     )
 endfunction()
 
+
+function(add_exercise name)
+    add_executable(${name}
+        src/main/exercises/${name}.cpp
+        ${CORE_SOURCES}
+    )
+    target_include_directories(${name} PRIVATE include)
+    target_link_libraries(${name}
+        "-framework OpenGL"
+        glfw
+    )
+endfunction()
+
+
 # Add individual examples
 add_example(WindowExecute)
 add_example(GLWindow)
@@ -50,4 +64,7 @@ add_example(HelloRectangle)
 add_example(RefHelloTriangle)
 add_example(RefHelloRectangle)
 
+# Add indivdual exercises
+add_exercise(MultipleTriangles)
+add_exercise(TwoTrianglesTwoColors)
 
