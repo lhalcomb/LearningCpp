@@ -14,7 +14,7 @@ int main(){
     Window window(SCR_WIDTH, SCR_HEIGHT, "Hello Window!"); 
      // Load shaders
     Shader YellowShader("../shaders/triangle1.vs", "../shaders/ytriangle.fs");
-    Shader OrangeShader("../shaders/triangle1.vs", "../shaders/triangle1.fs");
+    Shader PurpleShader("../shaders/triangle1.vs", "../shaders/triangle1.fs");
 
     // set up vertex data (and buffer(s)) and configure vertex attributes
     // ------------------------------------------------------------------
@@ -36,7 +36,7 @@ int main(){
     };
 
 
-    Triangle OrangeTriangle(vertices1, sizeof(vertices1), false);
+    Triangle PurpleTriangle(vertices1, sizeof(vertices1), false);
     Triangle YellowTriangle(vertices2, sizeof(vertices2), false);
 
      // Main loop
@@ -51,8 +51,8 @@ int main(){
         YellowShader.use();
         YellowTriangle.draw();
 
-        OrangeShader.use();
-        OrangeTriangle.draw();
+        PurpleShader.use();
+        PurpleTriangle.draw();
         
 
         

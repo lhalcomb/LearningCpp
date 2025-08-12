@@ -63,6 +63,7 @@ add_example(HelloTriangle)
 add_example(HelloRectangle)
 add_example(RefHelloTriangle)
 add_example(RefHelloRectangle)
+add_example(LearnShaders)
 
 # Add indivdual exercises
 add_exercise(MultipleTriangles)
