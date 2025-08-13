@@ -11,9 +11,9 @@ const unsigned int SCR_HEIGHT = 600;
 
 int main(){
 
-    Window window(SCR_WIDTH, SCR_HEIGHT, "Color Changing Triangle!"); 
+    Window window(SCR_WIDTH, SCR_HEIGHT, "Fragment Shader Manipulation"); 
     //Shader shader("../shaders/triangle1.vs", "../shaders/firstuniform.fs");
-    Shader shader("../shaders/colorvalue.vs", "../shaders/colorvalue.fs");
+    Shader shader("../shaders/fsChange.vs", "../shaders/fsChange.fs");
 
     unsigned int shaderProgram = shader.getID();
 

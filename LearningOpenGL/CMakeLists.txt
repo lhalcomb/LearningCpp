@@ -68,4 +68,6 @@ add_example(LearnShaders)
 # Add indivdual exercises
 add_exercise(MultipleTriangles)
 add_exercise(TwoTrianglesTwoColors)
+add_exercise(UniformOffset)
+add_exercise(fsManipulation)
 

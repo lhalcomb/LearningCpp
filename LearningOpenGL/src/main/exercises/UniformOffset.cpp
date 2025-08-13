@@ -11,11 +11,13 @@ const unsigned int SCR_HEIGHT = 600;
 
 int main(){
 
-    Window window(SCR_WIDTH, SCR_HEIGHT, "Color Changing Triangle!"); 
+    Window window(SCR_WIDTH, SCR_HEIGHT, "Uniform Offset Exercise"); 
     //Shader shader("../shaders/triangle1.vs", "../shaders/firstuniform.fs");
-    Shader shader("../shaders/colorvalue.vs", "../shaders/colorvalue.fs");
+    Shader shader("../shaders/offsetvalue.vs", "../shaders/colorvalue.fs");
 
     unsigned int shaderProgram = shader.getID();
+    float offset = 0.5f;
+    
 
 
     float vertices[] = {
@@ -50,7 +52,7 @@ int main(){
         // float greenValue = static_cast<float>(sin(timeValue) / 2.0 + 0.5);
         // int vertexColorLocation = glGetUniformLocation(shaderProgram, "ourColor");
         // glUniform4f(vertexColorLocation, 0.0f, greenValue, 0.0f, 1.0f);
-
+        shader.setFloat("xOffset", offset);
         shader.use();
         triangle.draw();
         
