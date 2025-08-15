@@ -7,26 +7,35 @@
 #include <iostream>
 
 
+/*
+        Try to display only the center pixels of the texture image on the rectangle in such a way that 
+        the individual pixels are getting visible by changing the texture coordinates. 
+        Try to set the texture filtering method to GL_NEAREST to see the pixels more clearly
 
+*/
+
+void changeVisibility(Window *window);
 
 //window parameters
 const unsigned int SCR_WIDTH = 800; 
 const unsigned int SCR_HEIGHT = 600; 
 
+float mixVisbility = 0.2f;
+
 int main(){
     
-    Window window(SCR_WIDTH, SCR_HEIGHT, "Textures!"); 
+    Window window(SCR_WIDTH, SCR_HEIGHT, "DISAPPEAR, REAPPEAR!"); 
 
     // build and compile our shader zprogram
     // ------------------------------------
-    Shader shader("../shaders/ogtexture.vs", "../shaders/ogtexture.fs"); 
+    Shader shader("../shaders/visible.vs", "../shaders/visible.fs"); 
 
     float vertices[] = {
     // positions          // colors           // texture coords
-     0.5f,  0.5f, 0.0f,   1.0f, 0.0f, 0.0f,   1.0f, 1.0f,   // top right
-     0.5f, -0.5f, 0.0f,   0.0f, 1.0f, 0.0f,   1.0f, 0.0f,   // bottom right
-    -0.5f, -0.5f, 0.0f,   0.0f, 0.0f, 1.0f,   0.0f, 0.0f,   // bottom left
-    -0.5f,  0.5f, 0.0f,   1.0f, 1.0f, 0.0f,   0.0f, 1.0f    // top left 
+    0.5f,  0.5f, 0.0f,   1.0f, 0.0f, 0.0f,   1.0f, 1.0f, // top right
+    0.5f, -0.5f, 0.0f,   0.0f, 1.0f, 0.0f,   1.0f, 0.0f, // bottom right
+    -0.5f, -0.5f, 0.0f,   0.0f, 0.0f, 1.0f,   0.0f, 0.0f, // bottom left
+    -0.5f,  0.5f, 0.0f,   1.0f, 1.0f, 0.0f,   0.0f, 1.0f  // top left 
     };
 
     unsigned int indices[] = {  
@@ -102,8 +111,8 @@ int main(){
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);	// set texture wrapping to GL_REPEAT (default wrapping method)
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
     // set texture filtering parameters
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
 
     data = stbi_load("../assets/awesomeface.png", &width, &height, &nrChannels, 0);
     if (data)
@@ -125,6 +134,7 @@ int main(){
      // Main loop
     while (!window.shouldClose()) {
         window.ProcessInput();
+        changeVisibility(&window);
 
          // Render commands here
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
@@ -142,6 +152,8 @@ int main(){
         glActiveTexture(GL_TEXTURE1);
         glBindTexture(GL_TEXTURE_2D, texture2);
 
+        shader.setFloat("visibility", mixVisbility);
+
         //render container
         shader.use();
     
@@ -155,4 +167,19 @@ int main(){
     }
 
     return 0;
+}
+
+void changeVisibility(Window* window){
+    if (window->isKeyPressed(GLFW_KEY_UP))
+    {
+        mixVisbility += 0.001f; // change this value accordingly (might be too slow or too fast based on system hardware)
+        if(mixVisbility >= 1.0f)
+            mixVisbility = 1.0f;
+    }
+    if (window->isKeyPressed(GLFW_KEY_DOWN))
+    {
+        mixVisbility -= 0.001f; // change this value accordingly (might be too slow or too fast based on system hardware)
+        if (mixVisbility <= 0.0f)
+            mixVisbility = 0.0f;
+    }
 }

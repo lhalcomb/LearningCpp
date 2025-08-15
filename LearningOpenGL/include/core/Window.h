@@ -13,6 +13,7 @@ class Window{
         void pollEvents() const;
         void swapBuffers() const;
         bool shouldClose() const;
+        bool isKeyPressed(int key);
 
         GLFWwindow* getGLFWwindow() const;
     private:

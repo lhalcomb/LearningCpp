@@ -36,8 +36,8 @@ int main(){
     };
 
 
-    Triangle PurpleTriangle(vertices1, sizeof(vertices1), false);
-    Triangle YellowTriangle(vertices2, sizeof(vertices2), false);
+    Triangle PurpleTriangle(vertices1, sizeof(vertices1)/sizeof(float), false);
+    Triangle YellowTriangle(vertices2, sizeof(vertices2)/sizeof(float), false);
 
      // Main loop
     while (!window.shouldClose()) {

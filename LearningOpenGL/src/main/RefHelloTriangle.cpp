@@ -40,7 +40,7 @@ int main(){
     //      0.45f, 0.5f, 0.0f   // top 
     // };
     //Call the triangle object
-    Triangle triangle(vertices, sizeof(vertices), false);
+    Triangle triangle(vertices, sizeof(vertices)/sizeof(float), false);
     //Triangle triangle1(vertices1, sizeof(vertices1), false);
     //Triangle triangle2(vertices2, sizeof(vertices2), false);
 

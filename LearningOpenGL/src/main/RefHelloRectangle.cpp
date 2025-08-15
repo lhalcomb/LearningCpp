@@ -32,7 +32,7 @@ int main(){
     };
 
     //Call the rectangle object
-    Rectangle rectangle(vertices, sizeof(vertices), indices, sizeof(indices), true);
+    Rectangle rectangle(vertices, sizeof(vertices), indices, sizeof(indices), false);
 
      // Main loop
     while (!window.shouldClose()) {

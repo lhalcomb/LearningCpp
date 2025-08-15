@@ -62,7 +62,12 @@ bool Window::shouldClose() const {
     return glfwWindowShouldClose(window);
 }
 
-void Window::ProcessInput(){
+bool Window::isKeyPressed(int key)
+{
+    return glfwGetKey(window, key) == GLFW_PRESS;
+}
+void Window::ProcessInput()
+{
     if ((glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS) || (glfwGetKey(window, GLFW_KEY_Q) == GLFW_PRESS))
         glfwSetWindowShouldClose(window, true);
 }
