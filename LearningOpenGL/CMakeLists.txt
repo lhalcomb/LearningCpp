@@ -12,7 +12,8 @@ include_directories(
     include
     include/glad
     ${GLFW_INCLUDE_DIRS}
-    /opt/homebrew/include            
+    /opt/homebrew/include
+    include/stb            
 )
 
 # Link directories
@@ -23,6 +24,7 @@ link_directories(
 # Core source files reused by all examples
 set(CORE_SOURCES
     src/glad.c
+    src/core/stb_image.cpp
     src/core/Window.cpp
     src/core/Shader.cpp
     src/core/Triangle.cpp
@@ -64,7 +66,8 @@ add_example(HelloRectangle)
 add_example(RefHelloTriangle)
 add_example(RefHelloRectangle)
 add_example(LearnShaders)
-
+add_example(LearnTextures)
+add_example(RefTexture)
 # Add indivdual exercises
 add_exercise(MultipleTriangles)
 add_exercise(TwoTrianglesTwoColors)

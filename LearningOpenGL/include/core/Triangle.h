@@ -5,7 +5,8 @@
 
 class Triangle{
     public:
-        Triangle(const float vertices[], size_t vertexCount, bool wireframe);
+        Triangle(const float vertices[], size_t vertexCount, bool wireframe = false);
+        Triangle(const float vertices[], size_t vertexCount, const unsigned int indices[], size_t indexCount, bool wireframe);
         ~Triangle();
 
         //Prevents copying the openGL Object IDs
@@ -19,6 +20,8 @@ class Triangle{
         void draw() const; //render the triangle accordingly
 
     private:
-        GLuint VBO, VAO;
+        GLuint VBO, VAO, EBO;
         size_t vertexCount;
+        size_t indexCount = 0;
+        bool hasIndices = false;
 };
