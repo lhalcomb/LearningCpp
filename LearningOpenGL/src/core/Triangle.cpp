@@ -14,25 +14,24 @@ Triangle::Triangle(const float vertices[], size_t vertexCount, const unsigned in
     this->vertexCount = vertexCount;
     this->indexCount = indexCount;
     this->hasIndices = (indices != nullptr && indexCount > 0);
-    //std::cout << hasIndices << std::endl;
-
-    // Auto-detect attributes based on vertexCount
-    bool hasColor = false;
-    bool hasTexCoords = false;
     
-    if (vertexCount == 18) { // positions + colors
-        hasColor = true;
+    // ----- Auto-detect floats per vertex -----
+    size_t floatsPerVertex = 3; // minimum is position (x,y,z)
+    {
+        // Try to guess from common layouts
+        if (vertexCount % 8 == 0) {          // pos(3) + color(3) + tex(2)
+            floatsPerVertex = 8;
+        } else if (vertexCount % 6 == 0) {   // pos(3) + color(3)
+            floatsPerVertex = 6;
+        } else if (vertexCount % 5 == 0) {   // pos(3) + tex(2)
+            floatsPerVertex = 5;
+        }
     }
-    else if (vertexCount == 24) { // positions + colors + texcoords
-        hasColor = true;
-        hasTexCoords = true;
-    }
-    else if (vertexCount == 32){
-        hasColor = true;
-        hasTexCoords = true;
-    }
-    //std::cout << hasTexCoords << std::endl;
 
+    // Infer attributes from floats per vertex
+    bool hasColor = (floatsPerVertex >= 6);
+    bool hasTexCoords = (floatsPerVertex == 5 || floatsPerVertex == 8);
+    
     // Generate VAO and VBO
     glGenVertexArrays(1, &VAO);
     glGenBuffers(1, &VBO);
@@ -51,10 +50,10 @@ Triangle::Triangle(const float vertices[], size_t vertexCount, const unsigned in
         glBufferData(GL_ELEMENT_ARRAY_BUFFER, indexCount * sizeof(unsigned int), indices, GL_STATIC_DRAW);
     }
 
-    size_t strideComponents = 3; // always have position
-    if (hasColor) strideComponents += 3;
-    if (hasTexCoords) strideComponents += 2;
-    size_t stride = strideComponents * sizeof(float);
+
+    // ----- Vertex attribute pointers -----
+    size_t stride = floatsPerVertex * sizeof(float);
+    size_t offset = 0;
 
      // Position attribute
     // Set vertex attribute pointers
@@ -64,11 +63,11 @@ Triangle::Triangle(const float vertices[], size_t vertexCount, const unsigned in
         GL_FLOAT,           // Data type
         GL_FALSE,           // Normalize?
         stride,             // Stride (distance between consecutive vertex attributes)
-        (void*)0            // Offset from start of data
+        (void*)offset           // Offset from start of data
     );
     glEnableVertexAttribArray(0); //enable vertices
-
-    size_t offset = 3 * sizeof(float);
+    offset += 3 * sizeof(float);
+    
 
     if (hasColor) {
     // Set vertex attribute pointers
@@ -96,7 +95,7 @@ Triangle::Triangle(const float vertices[], size_t vertexCount, const unsigned in
                 (void*)(offset)       // Offset from start of data
             );
         glEnableVertexAttribArray(2); //enable texture
-        
+        offset += 2 * sizeof(float);
     }
 
     // Unbind VBO (optional)
@@ -116,15 +115,21 @@ Triangle::~Triangle() {
     // Cleanup GPU resources
     glDeleteVertexArrays(1, &VAO);
     glDeleteBuffers(1, &VBO);
+    if (hasIndices) glDeleteBuffers(1, &EBO);
 };
 
 void Triangle::draw() const {
     glBindVertexArray(VAO);
     if (hasIndices){
         glDrawElements(GL_TRIANGLES, indexCount, GL_UNSIGNED_INT, 0);
-        //std::cout << indexCount << std::endl;
     }else{
-        glDrawArrays(GL_TRIANGLES, 0, vertexCount / (vertexCount / 3)); // vertexCount is number of floats, so /3 for actual vertices
+    
+        size_t floatsPerVertex = 3;
+        if (vertexCount % 8 == 0) floatsPerVertex = 8;
+        else if (vertexCount % 6 == 0) floatsPerVertex = 6;
+        else if (vertexCount % 5 == 0) floatsPerVertex = 5;
+        size_t numVertices = vertexCount / floatsPerVertex;
+        glDrawArrays(GL_TRIANGLES, 0, numVertices);
     }
     glBindVertexArray(0);
 };
