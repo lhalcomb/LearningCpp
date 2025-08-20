@@ -122,6 +122,8 @@ int main(){
 
     stbi_image_free(data);
 
+    
+
     shader.use();
     shader.setInt("texture1", 0);
     shader.setInt("texture2", 1);
@@ -149,19 +151,41 @@ int main(){
         glBindTexture(GL_TEXTURE_2D, texture2);
 
         /// create transformations
-        // glm::mat4 transform = glm::mat4(1.0f); // make sure to initialize matrix to identity matrix first
-        // transform = glm::translate(transform, glm::vec3(0.5f, -0.5f, 0.0f));
-        // transform = glm::rotate(transform, (float)glfwGetTime(), glm::vec3(0.0f, 0.0f, 1.0f));
+        glm::mat4 transform = glm::mat4(1.0f); // make sure to initialize matrix to identity matrix first
 
-        // get matrix's uniform location and set matrix
-        shader.use();
+        //-- first container
+        transform = glm::translate(transform, glm::vec3(0.5f, -0.5f, 0.0f));
+        transform = glm::rotate(transform, (float)glfwGetTime(), glm::vec3(0.0f, 0.0f, 1.0f));
+        // get their uniform location and set matrix (using glm::value_ptr)
         unsigned int transformLoc = glGetUniformLocation(shader.getID(), "transform");
-        // glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(transform));
-        glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(trans) );
-    
-        //triangle.draw();
+        glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(transform));
+        // //rotate first
+        // transform = glm::rotate(transform, (float)glfwGetTime(), glm::vec3(0.0f, 0.0f, 1.0f));
+        // //then translate
+        // transform = glm::translate(transform, glm::vec3(0.5f, -0.5f, 0.0f));
+
+        //with the uniform matrix set, draw the first container
         glBindVertexArray(VAO);
         glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+
+
+        //--- second container 
+        transform = glm::mat4(1.0f); // reintitialize the identity matrix
+        transform = glm::translate(transform, glm::vec3(-0.5f, 0.5f, 0.0f));
+        float scaleAmnt = static_cast<float>(sin(glfwGetTime()));
+        transform = glm::scale(transform, glm::vec3(scaleAmnt, scaleAmnt, scaleAmnt)); 
+        glUniformMatrix4fv(transformLoc, 1, GL_FALSE, &transform[0][0]); // / this time take the matrix value array's first element as its memory pointer value
+        // now with the uniform matrix being replaced with new transformations, draw it again.
+        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+        // get matrix's uniform location and set matrix
+        // shader.use();
+        // unsigned int transformLoc = glGetUniformLocation(shader.getID(), "transform");
+        // glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(transform));
+        //glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(trans) );
+    
+        //triangle.draw();
+        // glBindVertexArray(VAO);
+        // glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 
 
         window.swapBuffers();

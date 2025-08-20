@@ -13,7 +13,8 @@ include_directories(
     include/glad
     ${GLFW_INCLUDE_DIRS}
     /opt/homebrew/include
-    include/stb            
+    include/stb  
+    include/glm          
 )
 
 # Link directories
@@ -69,6 +70,7 @@ add_example(LearnShaders)
 add_example(LearnTextures)
 add_example(RefTexture)
 add_example(LearnTransformations)
+add_example(LearnCoordinates)
 # Add indivdual exercises
 add_exercise(MultipleTriangles)
 add_exercise(TwoTrianglesTwoColors)
@@ -78,4 +80,5 @@ add_exercise(HylianTriforce)
 add_exercise(fourSmileys)
 add_exercise(displayCenterPixels)
 add_exercise(changeVisibility)
+add_exercise(rotateSmiley)
 
